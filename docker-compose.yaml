@@ -38,6 +38,10 @@ services:
     depends_on:
       - pgdatabase
 
+networks:
+  default:
+    name: docker-workshop-network
+
 volumes:
   ny_taxi_postgres_data:
   pgadmin_data:

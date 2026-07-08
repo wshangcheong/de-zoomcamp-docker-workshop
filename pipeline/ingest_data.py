@@ -14,7 +14,7 @@ chunksize = 100000
 @click.option(
     '--target-table', 
     "target_tables", 
-    default=('yellow_taxi_data',), 
+    default=('yellow_taxi_trips',), 
     multiple=True, 
     help='Target table name'
 )
@@ -26,7 +26,7 @@ def run(pg_user, pg_pass, pg_host, pg_port, pg_db, target_tables):
 
 def get_df_iter(target_table):
     table_info = {
-        "yellow_taxi_data": {
+        "yellow_taxi_trips": {
             "url": "https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz",
             "dtype": {
                 "VendorID": "Int64",
@@ -51,7 +51,7 @@ def get_df_iter(target_table):
                 "tpep_dropoff_datetime"
             ]
         },
-        "zone_lookup": {
+        "zones": {
             "url": "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv",
             "dtype": {
                 "LocationID": "Int64",
