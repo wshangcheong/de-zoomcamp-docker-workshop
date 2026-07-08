@@ -19,6 +19,24 @@ services:
       - "pgadmin_data:/var/lib/pgadmin"
     ports:
       - "8085:80"
+    
+  ingest:
+    build: .
+    command:
+      - --pg-host
+      - pgdatabase
+      - --pg-user
+      - root
+      - --pg-pass
+      - root
+      - --pg-db
+      - ny_taxi
+      - --target-table
+      - yellow_taxi_trips
+      - --target-table
+      - zones
+    depends_on:
+      - pgdatabase
 
 volumes:
   ny_taxi_postgres_data:
