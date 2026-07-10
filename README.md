@@ -18,6 +18,7 @@
 - make force builds explicit if something's changed and should be shown. maybe versioning comes in play here?
 - uv handles env requirements .toml and uv.lock should get copied over and run first in docker file
 - `pip install uv` > `uv init xx` > `uv add x1 x2 x3...` > `uv run python filename.py *args`
+- `uv add --dev x1 x2...` adds packages used for dev but not required for prod use
 - add things to .gitignore, e.g. data files or credentials, to not have them committed to git 
 - networks in docker help containers communicate with each other
 - still don't fully get ports but we'll get there some day
