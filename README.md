@@ -3,7 +3,7 @@
 ## how this mini program generally works
 1. just to get a taste of docker
 2. run `pip install uv` in terminal
-3. run `uv init --python=3.13` (or some other python version) to create virtual environment (.venv) as well as pyproject.toml file so keep package requirements
+3. run `uv init --python=3.13` (or some other python version) to create virtual environment (.venv) as well as pyproject.toml file to keep package requirements
 4. run `uv add pandas pyarrow` in terminal will add these packages to the .toml file
 2. run `docker compose up` to get things running, i.e. setup db, postgres interface, and run ingestion of taxi data
 3. follow steps [here](https://github.com/wshangcheong/data-engineering-zoomcamp/blob/main/01-docker-terraform/docker-sql/07-pgadmin.md#connect-pgadmin-to-postgresql) to check out the postgres db and run some sql stuff there
