@@ -27,3 +27,6 @@
 ## some questions remain:
 - file structure? where to keep dockerfile? can I have multiple in separate folders? 
 - can there only be one docker-compose? (based on the way they're named, probably not...)
+
+## some other things I could work on down the road:
+- use something else to store the data dictionary or heck even fetch that info directly somehow rather than storing that within the script
